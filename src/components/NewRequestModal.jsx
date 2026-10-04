@@ -239,7 +239,7 @@ export default function NewRequestModal({
     
 
     const res = await fetch(
-      "http://localhost:5000/api/req/request",
+      `${import.meta.env.VITE_API_URL}/api/req/request`,
       {
         method: "POST",
         headers: {
@@ -271,7 +271,7 @@ export default function NewRequestModal({
     if (savedRequest) {
       try {
         const verifyResponse = await fetch(
-          `http://localhost:5000/api/verify/verify/${savedRequest}`,
+          `${import.meta.env.VITE_API_URL}/api/verify/verify/${savedRequest}`,
           {
             method: "POST",
             headers: {
@@ -304,7 +304,7 @@ export default function NewRequestModal({
 
       try {
     const policyResponse = await fetch(
-      `http://localhost:5000/api/policy/policy/${savedRequest}`,
+      `${import.meta.env.VITE_API_URL}/api/policy/policy/${savedRequest}`,
       {
         method: "POST",
 
