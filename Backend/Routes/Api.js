@@ -1,7 +1,7 @@
 import express from  'express';
 import bcrypt from "bcryptjs";
 import mongoose  from "mongoose";
-import User from  '../model/User.js';
+import User from  '../Model/User.js';
 const router = express.Router();
 
 router.post("/register" , async(req,res)=>{
